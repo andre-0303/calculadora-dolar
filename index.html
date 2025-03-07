@@ -8,19 +8,26 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="container-fluid container">
-        <h1 class="text-center title fw-bold">Calculadora de Real para Dólar 💰</h1>
+   <div class="container-fluid ">
+    <h1 class="text-center title fw-bold fs-1">Calculadora de Real para Dólar 💰</h1>
 
-        <form class="container w-25">
+    <div class="row justify-content-center">
+        <form class="col-12 col-md-6 col-lg-4 w-25">
             <div class="mb-3">
-              <label for="valorReal" class="form-label fw-bold fs-4">Digite o valor em Real (BRL):</label>
-              <input type="number" class="form-control w-100" id="valorReal" placeholder="Ex: 100">
+                <label for="valorReal" class="form-label fw-bold fs-4">Digite o valor em Real (BRL):</label>
+                <input type="number" class="form-control" id="valorReal" placeholder="Ex: 100">
             </div>
-            <button onclick="converter(event)" class="btn btn-secondary">Calcular</button>
-            <button onclick="limpar(event)" class="btn btn-danger">Limpar</button>
-          </form>
-          <p id="resultado"></p>
+
+            <div class="d-flex flex-column gap-2">
+                <button type="button" onclick="converter()" class="btn btn-secondary">Calcular</button>
+                <button type="button" onclick="limpar()" class="btn btn-danger">Limpar</button>
+            </div>
+        </form>
     </div>
+
+    <p id="resultado"></p>
+</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="/scripts.js"></script>

@@ -1,3 +1,4 @@
+/* Estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -6,37 +7,89 @@
 
 body {
     background: linear-gradient(90deg, rgba(36, 3, 3, 1) 8%, rgba(177, 118, 13, 1) 49%, rgba(247, 124, 6, 1) 100%);
-}
-
-.container-fluid {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-.title {
-    margin-bottom: 2.1rem;
-    color: #d8d5d5;
+/* Ajusta o container principal */
+.container-fluid {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
 }
 
+/* Título responsivo */
+.title {
+    margin-bottom: 2rem;
+    color: #d8d5d5;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+/* Ajusta o input */
 .form-control {
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     font-size: 1.5rem;
     margin-top: 20px;
 }
 
+/* Botões com espaçamento adequado */
 .btn {
-    width: 300px;
+    width: 100%;
     height: 50px;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 10px;
 }
 
+/* Resultado centralizado */
 #resultado {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #fff;
-    text-align: center;
+}
+
+@media (max-width: 780px) {
+    .container-fluid {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* Ajusta o formulário */
+    .col-12 {
+        width: 100%;
+    }
+
+    /* Ajuste para a largura e o espaçamento dos inputs */
+    .form-control {
+        font-size: 1rem;
+        width: 300px;
+        margin-left: -110px;
+    }
+
+    /* Ajusta os botões */
+    .btn {
+        font-size: 1.1rem;
+        width: 200px;
+        margin-left: -60px;
+    }
+
+    /* Ajusta o título */
+    .title {
+        font-size: 2.5rem;
+    }
+
+    /* Ajusta o resultado */
+    #resultado {
+        font-size: 1.2rem;
+    }
+    
+    .form-label {
+        width: 400px;
+        margin-left: -160px;
+        color: #bcb6b6;
+    }
 }
