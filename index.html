@@ -16,7 +16,8 @@
               <label for="valorReal" class="form-label fw-bold fs-4">Digite o valor em Real (BRL):</label>
               <input type="number" class="form-control w-100" id="valorReal" placeholder="Ex: 100">
             </div>
-            <button onclick="converter()" class="btn btn-secondary">Calcular</button>
+            <button onclick="converter(event)" class="btn btn-secondary">Calcular</button>
+            <button onclick="limpar(event)" class="btn btn-danger">Limpar</button>
           </form>
           <p id="resultado"></p>
     </div>
